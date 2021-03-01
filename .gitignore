@@ -3,4 +3,10 @@
 *.pdf
 *.pptx
 *.docx
+<<<<<<< HEAD
 __pycache__/
+=======
+*.csv
+*.odt
+
+>>>>>>> 8d1cfa73b21cef2fd66ac6db32eb2b30e2588a77

@@ -16,12 +16,13 @@ def firstAlgorithm(n):
                 j += i
         i += 1
 
-    for i in range(n):
-        if c[i]:
-            print(i)
+    # for i in range(n):
+    #     if c[i]:
+    #         print(i)
 
 
 def secondAlgorithm(n):
+    
     c = [True] * n
 
     c[0] = False
@@ -34,9 +35,9 @@ def secondAlgorithm(n):
             j += i
         i += 1
 
-    for i in range(n):
-        if c[i]:
-            print(i)
+    # for i in range(n):
+    #     if c[i]:
+    #         print(i)
 
 
 def thirdAlgorithm(n):
@@ -55,9 +56,9 @@ def thirdAlgorithm(n):
                 j += 1
         i += 1
 
-    for i in range(n):
-        if c[i]:
-            print(i)
+    # for i in range(n):
+    #     if c[i]:
+    #         print(i)
 
 def fourthAlgorithm(n):
 
@@ -74,9 +75,9 @@ def fourthAlgorithm(n):
             j += 1
         i += 1
 
-    for i in range(n):
-        if c[i]:
-            print(i)
+    # for i in range(n):
+    #     if c[i]:
+    #         print(i)
 
 
 def fifthAlgorithm(n):
@@ -94,6 +95,6 @@ def fifthAlgorithm(n):
             j += 1
         i += 1
 
-    for i in range(n):
-        if c[i]:
-            print(i)
+    # for i in range(n):
+    #     if c[i]:
+    #         print(i)
