@@ -314,9 +314,7 @@ class BlockingContourLabeler(BlockingMouseInput):
         ----------
         event : `~.backend_bases.MouseEvent`
         """
-        if self.inline:
-            pass
-        else:
+        if not self.inline:
             self.cs.pop_label()
             self.cs.ax.figure.canvas.draw()
 

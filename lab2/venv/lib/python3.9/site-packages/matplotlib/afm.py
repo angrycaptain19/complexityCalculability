@@ -79,10 +79,7 @@ def _to_list_of_floats(s):
 
 
 def _to_bool(s):
-    if s.lower().strip() in (b'false', b'0', b'no'):
-        return False
-    else:
-        return True
+    return s.lower().strip() not in (b'false', b'0', b'no')
 
 
 def _parse_header(fh):
@@ -147,10 +144,7 @@ def _parse_header(fh):
             if key != b'StartFontMetrics':
                 raise RuntimeError('Not an AFM file')
             first_line = False
-        if len(lst) == 2:
-            val = lst[1]
-        else:
-            val = b''
+        val = lst[1] if len(lst) == 2 else b''
         try:
             converter = header_converters[key]
         except KeyError:

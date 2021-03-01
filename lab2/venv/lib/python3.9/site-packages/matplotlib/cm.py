@@ -330,8 +330,7 @@ class ScalarMappable:
         x = ma.asarray(x)
         if norm:
             x = self.norm(x)
-        rgba = self.cmap(x, alpha=alpha, bytes=bytes)
-        return rgba
+        return self.cmap(x, alpha=alpha, bytes=bytes)
 
     def set_array(self, A):
         """

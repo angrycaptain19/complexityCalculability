@@ -176,8 +176,7 @@ class ToolManager:
             List of keys associated with the tool.
         """
 
-        keys = [k for k, i in self._keys.items() if i == name]
-        return keys
+        return [k for k, i in self._keys.items() if i == name]
 
     def _remove_keys(self, name):
         for k in self.get_tool_keymap(name):
