@@ -48,7 +48,7 @@ def combSort(array):
 
         # Compare all elements with current gap
         gap = int(gap)
-        for i in range(0, n - gap):
+        for i in range(n - gap):
             if array[i] > array[i + gap]:
                 array[i], array[i + gap] = array[i + gap], array[i]
                 swapped = True

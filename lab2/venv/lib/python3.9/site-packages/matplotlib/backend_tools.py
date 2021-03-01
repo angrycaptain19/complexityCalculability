@@ -274,11 +274,7 @@ class SetCursorBase(ToolBase):
                 'motion_notify_event', self._set_cursor_cbk)
 
     def _tool_trigger_cbk(self, event):
-        if event.tool.toggled:
-            self._cursor = event.tool.cursor
-        else:
-            self._cursor = None
-
+        self._cursor = event.tool.cursor if event.tool.toggled else None
         self._set_cursor_cbk(event.canvasevent)
 
     def _add_tool(self, tool):
@@ -301,7 +297,7 @@ class SetCursorBase(ToolBase):
             if self._last_cursor != self._default_cursor:
                 self.set_cursor(self._default_cursor)
                 self._last_cursor = self._default_cursor
-        elif self._cursor:
+        else:
             cursor = self._cursor
             if cursor and self._last_cursor != cursor:
                 self.set_cursor(cursor)
@@ -578,10 +574,7 @@ class ToolViewsPositions(ToolBase):
         home_views = self.home_views[self.figure]
         all_axes = self.figure.get_axes()
         for a in all_axes:
-            if a in views:
-                cur_view = views[a]
-            else:
-                cur_view = home_views[a]
+            cur_view = views[a] if a in views else home_views[a]
             a._set_view(cur_view)
 
         if set(all_axes).issubset(pos):
