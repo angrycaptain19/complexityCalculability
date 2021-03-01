@@ -53,7 +53,34 @@ def combSort(array):
                 array[i], array[i + gap] = array[i + gap], array[i]
                 swapped = True
             yield array
+# end of combSort function
 
+def insertionSort(array):
+
+    for i in range(1, len(array)):
+        j = i
+        while j > 0 and array[j] < array[j - 1]:
+            swap(array, j, j - 1)
+            j -= 1
+            yield array
+# end of insertionSort function
+
+def selectionSort(array):
+    
+    if len(array) == 1:
+        return
+
+    for i in range(len(array)):
+        minVal = array[i]
+        minIdx = i
+        for j in range(i, len(array)):
+            if array[j] < minVal:
+                minVal = array[j]
+                minIdx = j
+            yield array
+        swap(array, i, minIdx)
+        yield array
+# end of selectionsort function
 
 def mergeSort(array, start, end):
     if end <= start:

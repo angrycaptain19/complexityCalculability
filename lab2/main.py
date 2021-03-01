@@ -18,6 +18,8 @@ if __name__ == '__main__':
                        "\n(m)erge"
                        "\n(h)eap"
                        "\n(b)ubble"
+                       "\n(i)nsertion"
+                       "\n(s)election"
                        "\n(c)omb"
                        "\n")
 
@@ -41,6 +43,12 @@ if __name__ == '__main__':
         elif method == "c":
             title = "combSort"
             generator = combSort(array)
+        elif method == "i":
+            title = "insertionSort"
+            generator = insertionSort(array)
+        elif method == "s":
+            title = "selectionSort"
+            generator = selectionSort(array)
         else:
             print("Incorrect value, try again!")
             continue
